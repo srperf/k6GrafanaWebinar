@@ -1,6 +1,6 @@
 const http = require('http');
 
-const hostname = '127.0.0.1';
+const hostname = '192.168.100.10';
 const port = 1234;
 //await new Promise(resolve => setTimeout(resolve, 5000));
 const server = http.createServer((req, res) => {
