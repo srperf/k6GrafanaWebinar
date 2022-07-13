@@ -1,14 +1,22 @@
 const http = require('http');
 
-const hostname = '192.168.100.10';
-const port = 1235;
-
+const hostname = '127.0.0.1';
+const port = 1234;
+//await new Promise(resolve => setTimeout(resolve, 5000));
 const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hola Mundo');
-},Math.floor(Math.random() * 10000) + 1);
+    res.writeHead(200, {'Content-Type': 'text/plain'});
+    res.write('Hola\n');
+    setInterval(function() {
+            res.end(' el World\n');
+        },between(1000,3000));
+});
 
-server.listen(port, hostname, () => {
-  console.log(`El servidor se está ejecutando en http://${hostname}:${port}/`);
+function between(min, max) {  
+    return Math.floor(
+      Math.random() * (max - min) + min
+    )
+  }
+
+server.listen(port, hostname, () => {    
+  console.log(`Server running at http://${hostname}:${port}/`);
 });
