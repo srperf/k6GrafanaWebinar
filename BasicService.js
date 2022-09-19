@@ -9,7 +9,7 @@ const server = http.createServer((req, res) => {
     res.write('Hola\n');
     setInterval(function() {
             res.end(' el World\n');
-        },between(10000,10500));
+        },between(500,1000));
 });
 
 function between(min, max) {  
