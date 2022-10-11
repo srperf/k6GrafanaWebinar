@@ -11,7 +11,7 @@ const server = http.createServer((req, res) => {
     setInterval(function() {
             res.end('\n Mitad\n');
         },between(5000,10000));
-    res.end('\n el World\n');
+    //res.end('\n el World\n');
 });
 
 function between(min, max) {  
