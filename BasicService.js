@@ -9,8 +9,9 @@ const server = http.createServer((req, res) => {
     res.writeHead(200, {'Content-Type': 'text/plain'});
     res.write('Hola\n' + initTime);
     setInterval(function() {
-            res.end('\n el World\n');
+            res.write('\n Mitad\n');
         },between(5000,10000));
+    res.end('\n el World\n');
 });
 
 function between(min, max) {  
