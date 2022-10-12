@@ -10,7 +10,7 @@ const server = http.createServer((req, res) => {
     res.write('Hola\n' + initTime);
     setInterval(function() {
             res.end('\n Mitad\n');
-        },between(5000,10000));
+        },between(500,1000));
     //res.end('\n el World\n');
 });
 
