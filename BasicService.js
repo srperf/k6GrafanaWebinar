@@ -1,9 +1,9 @@
 const http = require('http');
-//THIS IS A COMMENT
-//const hostname = '192.168.100.19';
-const hostname = '10.67.88.250';
+
+//const hostname = '10.64.63.126';
+const hostname = 'localhost';
 let initTime = Date.now();
-const port = 1235;
+const port = 1234;
 //await new Promise(resolve => setTimeout(resolve, 5000));
 const server = http.createServer((req, res) => {
     res.writeHead(200, {'Content-Type': 'text/plain'});
