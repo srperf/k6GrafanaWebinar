@@ -1,7 +1,7 @@
 const http = require('http');
 
 //const hostname = '192.168.100.19';
-const hostname = 'localhost';
+const hostname = '10.67.88.250';
 let initTime = Date.now();
 const port = 1235;
 //await new Promise(resolve => setTimeout(resolve, 5000));
